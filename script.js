@@ -23,6 +23,11 @@ function generateTeamCards() {
     teamMembers.forEach(member => {
         const card = document.createElement('div')
         card.classList.add('col-md-4')
+
+//styling card based on position:
+let backgroundColor
+
+
 //create a list of skils with li tags
 const skillsList =member.skills.map(skill => `<li> ${skill} </li>`).join('')
 
