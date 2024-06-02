@@ -1,23 +1,32 @@
 const teamMembers = [
   {
-    name: "Lionel Messi",
-    position: "Forward",
-    skills: ["Dribbling", "Shoothing", "Passing"],
-    strengths: "Ball control",
-    weaknesses: "Heading Ability",
-    biography:
-      "Lionel Messi is considereed on the the greatest football players",
+    name: 'Sheldon Lee Sheldon',
+    skills: ['Advanced Intellectual Abilities', 'Great Memory and Knowledge', 'Technological Proficiency'],
+    strengths: 'Communication, Intelligence, Honest',
+    weaknesses: 'Germaphobic, Socializing',
+    description : 'Sheldon Cooper, a child prodigy with a towering intellect and an insatiable curiosity, navigates the complexities of growing up in East Texas while pursuing his passion for science and learning.',
+    img: ''
   },
   {
-    name: "Lionel Messi Jr",
-    position: "Forward",
-    skills: ["Dribbling", "Shoothing", "Passing"],
-    strengths: "Ball control",
-    weaknesses: "Heading Ability",
-    biography:
-      "Lionel Messi is considereed on the the greatest football players",
+    name: 'Hrithik Roshan',
+    position: 'All-rounder',
+    skills: ['Acting', 'Dancing', 'Modeling'],
+    strengths: 'Physique, Dance skills, Screen presence',
+    weaknesses: 'Typecasting, Public perception',
+    biography: 'Hrithik Roshan is an Indian actor known for his dancing skills and performance in Hindi films.',
+    bestMovie: 'Koi Mil Gaya',
+    img: 'image/hritick.PNG'
   },
-];
+  {
+    name: 'Siddharth Malhotra &#11088 ( Captain) ',
+    position: 'Batsman',
+    skills: ['Acting', 'Modeling'],
+    strengths: 'Looks, Versatility',
+    weaknesses: 'Limited filmography',
+    biography: 'Siddharth Malhotra is an Indian actor and former model who appears in Hindi films.',
+    bestMovie: 'Student of the Year',
+    img: 'image/sid.PNG'
+  },
 function generateTeamCards() {
   const teamCardsContainer = document.getElementById("teamCards");
   teamMembers.forEach((member) => {
