@@ -25,13 +25,61 @@ const teamMembers = [
   },
   {
     name: 'Missy Cooper',
-    skills: ['Social Intelligence', 'Creativity', 'Sense of Humour'],
+    skills: ['Social Intelligence', 'Creative', 'Sense of Humour'],
     strengths: 'Communication, Physically Strong, Curiosity',
     weaknesses: 'Impatient, Overconfidence',
-    description : 'Missy Cooper, Sheldon's twin sister in "Young Sheldon," is a socially adept and athletically talented teenager who balances her competitive spirit with a caring nature, often providing support and levity within the Cooper family dynamic. Despite her strengths, she grapples with impulsiveness and a search for direction, adding depth to her character's journey of self-discovery.',
+    description : 'Missy Cooper, Sheldons twin sister in "Young Sheldon," is a socially adept and athletically talented teenager who balances her competitive spirit with a caring nature, often providing support and levity within the Cooper family dynamic. Despite her strengths, she grapples with impulsiveness and a search for direction, adding depth to her characters journey of self-discovery.',
     img: 'images/missy cooper.png'
   },
-  
+  {
+    name: 'Meemaw',
+    skills: ['Wisdom', 'Life Experience', 'Unconditional Love and Support'],
+    strengths: 'Logical, Sympathetic, Honest',
+    weaknesses: 'Stubborn, Overprotective ,Impatient',
+    description : 'Meemaw, the matriarch of the Cooper family in "Young Sheldon," is a formidable and nurturing presence, known for her sharp wit, unwavering love for her family, and practical wisdom. While her strength and resilience are undeniable, she also grapples with vulnerabilities such as stubbornness and a reluctance to express vulnerability, adding depth to her character and enriching the dynamic of the show.',
+    img: 'images/meemaw.png'
+  },
+  {
+    name: 'Marry Cooper',
+    skills: ['Strength/Resillience', 'Strong Moral Compass', 'Sense of Humor and Levity'],
+    strengths: 'Communication, Religious, Resillient',
+    weaknesses: 'Difficulty of Fitting In, Overthinking',
+    description : 'Mary Cooper, the devoted mother in "Young Sheldon," exudes warmth, compassion, and unwavering support for her family, navigating the challenges of raising her unique children with grace and resilience. Her nurturing nature, coupled with her strong moral compass and sense of humor, makes her the heart and backbone of the Cooper household.',
+    img: 'images/mary cooper.png'
+  },
+  {
+    name: 'John Sturgis',
+    skills: ['Academic Excellence', 'Teaching and Mentorship', 'Problem-Solving and Analytical Thinking'],
+    strengths: 'Communication, emphathy, Curiosity',
+    weaknesses: 'overcommitment, struggles with mental health',
+    description : 'John Sturgis, the brilliant physicist and mentor in "Young Sheldon," is known for his exceptional intellect, passion for teaching, and warm-hearted nature. Despite his struggles with balancing work and personal life, and occasional eccentricities, his dedication to his students, including Sheldon, shines through, making him an integral part of the Cooper familys journey.',
+    img: 'images/john sturgis.png'
+  },
+  {
+    name: 'Georgie Cooper',
+    skills: ['Very good at football', 'Good Salesemen', 'Street Smart'],
+    strengths: 'Atheltic, Communication, Loyal',
+    weaknesses: 'Impulsive, Impatient ,Lack of Academic focus ',
+    description : 'Georgie Cooper, the eldest son in "Young Sheldon," is a charismatic and athletic teenager known for his leadership on the football field and his protective instincts towards his family, especially his younger brother Sheldon. Despite his academic struggles and occasional impulsiveness, Georgies loyalty, street smarts, and natural leadership qualities make him an integral part of the Cooper family dynamic, adding depth and complexity to the series.',
+    img: 'images/georgie copper.png'
+  },
+  {
+    name: 'George Cooper',
+    skills: ['mechanical skills', 'communication skills', 'good work ethic'],
+    strengths: 'dedicated family member, protective, Resillient',
+    weaknesses: 'Stubborness, Communication Challenges',
+    description : 'George Cooper Sr. in "Young Sheldon" is a hardworking and devoted family man who prioritizes providing for his loved ones, often juggling the demands of his job at the factory with his responsibilities at home. Despite his steadfast dedication, George grapples with communication challenges and stubbornness, adding depth to his character as he navigates the ups and downs of family life in 1980s Texas..',
+    img: 'images/george cooper.png'
+  },
+  {
+    name: 'Dale Ballard',
+    skills: ['Analytical and Observational Skills', 'Interpersonal Skills and Charisma', 'Physical and Survival Skills'],
+    strengths: 'Communication, emphathy, Loyalty',
+    weaknesses: 'Rude, Gambles too much',
+    description : 'Dale is a vital character in "Young Sheldon" who dates the character Meemaw and coaches Missy',
+    img: 'images/dale ballard.png'
+  },
+]
 function generateTeamCards() {
   const teamCardsContainer = document.getElementById("teamCards");
   teamMembers.forEach((member) => {
