@@ -98,48 +98,39 @@ function generateTeamCards() {
 
     //styling card based on position:
     let backgroundColor;
+ 
+    card.style.backgroundColor = backgroundColor;
+   
     switch (member.position.toLowerCase()) {
       case 'Student':
-        backgroundColor = '#ffc107'; // Yellow for Student
-        break;
-      case 'Pastor':
-        backgroundColor = '#28a745'; // Green for Pastors
-        break;
-      case 'Gambler':
-        backgroundColor = '#007bff'; // Blue for Gambler
-        break;
-      case 'Church worker':
-        backgroundColor = '#dc3545'; // Red for Church worker
-        break;
+        backgroundColor = 'red'
+        break
+      case 'mid':
+        backgroundColor = 'green'
+        break
+      case 'defender':
+        backgroundColor = 'blue'
+        break
       default:
-        backgroundColor = '#6c757d'; // Gray for other positions
+        backgroundColor = 'gray'
     }
-    card.style.backgroundColor = backgroundColor;
-
     //create a list of skils with li tags
     const skillsList = member.skills
       .map((skill) => `<li> ${skill} </li>`)
       .join("");
 
-    card.innerHTML = `
-    <div class= "card">
-    <div class ="card-header"> ${member.name}</div>
-    <div class="card-body">
-    <p><strong><Position:</strong> ${member.Position}</p>
-    <p><strong><Skills:</strong> </p>
-    <ul>
-    ${skillsList}
-    </ul>
-    <p><strong>Strengths:</strong> ${member.strengths}</p>
-    <p><strong>Weakness:</strong> ${member.weaknesses}</p>
-    <p><strong>Description:</strong> ${member.description}</p>
-    <p><strong>Image:</strong> <img src="${member.img}" alt="${member.name}" class="img-fluid"></p>
-
-
-    
-
-    </div>
-    </div>
+      card.innerHTML = `
+      <div class="card">
+        <div class="card-header">${member.name}</div>
+        <div class="card-body">
+          <p><strong>Position:</strong> ${member.position}</p>
+          <p><strong>Skills:</strong><ul>${skillsList}</ul></p>
+          <p><strong>Strengths:</strong> ${member.strengths}</p>
+          <p><strong>Weaknesses:</strong> ${member.weaknesses}</p>
+          <p><strong>Description:</strong> ${member.description}</p>
+          <p><strong>Image:</strong> <img src="${member.img}" alt="${member.name}" class="img-fluid"></p>
+        </div>
+      </div>
     `;
     teamCardsContainer.appendChild(card);
   });
