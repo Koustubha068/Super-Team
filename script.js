@@ -1,5 +1,6 @@
 const teamMembers = [
   {
+    position:'Student',
     name: 'Sheldon Lee Sheldon',
     skills: ['Advanced Intellectual Abilities', 'Great Memory and Knowledge', 'Technological Proficiency'],
     strengths: 'Communication, Intelligence, Honest',
@@ -8,6 +9,7 @@ const teamMembers = [
     img: 'images/sheldon.png'
   },
   {
+    position:'Pastor',
     name: 'Pastor Jeff',
     skills: ['Good at Public Speaking', 'He is a very good mentor', 'Very good at handling challenges'],
     strengths: 'Communication, Emphatethic, Great Leadership',
@@ -16,6 +18,7 @@ const teamMembers = [
     img: 'images/pastor jef.png'
   },
   {
+    position:'Student',
     name: 'Paige',
     skills: ['Advanced Intellectual Abilities', 'Analytical and Problem-Solving Skills', 'Creativity and Innovation'],
     strengths: 'Communication, Intelligence, Curiosity',
@@ -24,6 +27,7 @@ const teamMembers = [
     img: 'images/paige.png'
   },
   {
+    position:'Student',
     name: 'Missy Cooper',
     skills: ['Social Intelligence', 'Creative', 'Sense of Humour'],
     strengths: 'Communication, Physically Strong, Curiosity',
@@ -32,6 +36,7 @@ const teamMembers = [
     img: 'images/missy cooper.png'
   },
   {
+    position:'Gambler',
     name: 'Meemaw',
     skills: ['Wisdom', 'Life Experience', 'Unconditional Love and Support'],
     strengths: 'Logical, Sympathetic, Honest',
@@ -40,6 +45,7 @@ const teamMembers = [
     img: 'images/meemaw.png'
   },
   {
+    position:'Church worker',
     name: 'Marry Cooper',
     skills: ['Strength/Resillience', 'Strong Moral Compass', 'Sense of Humor and Levity'],
     strengths: 'Communication, Religious, Resillient',
@@ -48,6 +54,7 @@ const teamMembers = [
     img: 'images/mary cooper.png'
   },
   {
+    postion: 'Proffesor',
     name: 'John Sturgis',
     skills: ['Academic Excellence', 'Teaching and Mentorship', 'Problem-Solving and Analytical Thinking'],
     strengths: 'Communication, emphathy, Curiosity',
@@ -56,6 +63,7 @@ const teamMembers = [
     img: 'images/john sturgis.png'
   },
   {
+    position:'Student',
     name: 'Georgie Cooper',
     skills: ['Very good at football', 'Good Salesemen', 'Street Smart'],
     strengths: 'Atheltic, Communication, Loyal',
@@ -64,6 +72,7 @@ const teamMembers = [
     img: 'images/georgie copper.png'
   },
   {
+    position:'Coach',
     name: 'George Cooper',
     skills: ['mechanical skills', 'communication skills', 'good work ethic'],
     strengths: 'dedicated family member, protective, Resillient',
@@ -72,6 +81,7 @@ const teamMembers = [
     img: 'images/george cooper.png'
   },
   {
+    position:'Coach',
     name: 'Dale Ballard',
     skills: ['Analytical and Observational Skills', 'Interpersonal Skills and Charisma', 'Physical and Survival Skills'],
     strengths: 'Communication, emphathy, Loyalty',
@@ -88,9 +98,21 @@ function generateTeamCards() {
 
     //styling card based on position:
     let backgroundColor;
-    switch (member.position) {
-      case "forward":
-        backgroundColor = "#EF767A";
+    switch (member.position.toLowerCase()) {
+      case 'Student':
+        backgroundColor = '#ffc107'; // Yellow for Student
+        break;
+      case 'Pastor':
+        backgroundColor = '#28a745'; // Green for Pastors
+        break;
+      case 'Gambler':
+        backgroundColor = '#007bff'; // Blue for Gambler
+        break;
+      case 'Church worker':
+        backgroundColor = '#dc3545'; // Red for Church worker
+        break;
+      default:
+        backgroundColor = '#6c757d'; // Gray for other positions
     }
     card.style.backgroundColor = backgroundColor;
 
@@ -103,14 +125,15 @@ function generateTeamCards() {
     <div class= "card">
     <div class ="card-header"> ${member.name}</div>
     <div class="card-body">
-    <p><strong><Position:</strong> ${member.position}</p>
+    <p><strong><Position:</strong> ${member.Position}</p>
     <p><strong><Skills:</strong> </p>
     <ul>
     ${skillsList}
     </ul>
     <p><strong>Strengths:</strong> ${member.strengths}</p>
     <p><strong>Weakness:</strong> ${member.weaknesses}</p>
-    <p><strong>Biography:</strong> ${member.biography}</p>
+    <p><strong>Description:</strong> ${member.description}</p>
+    <p><strong>Image:</strong> <img src="${member.img}" alt="${member.name}" class="img-fluid"></p>
 
 
     
@@ -122,3 +145,5 @@ function generateTeamCards() {
   });
 }
 window.onload = generateTeamCards();
+
+
