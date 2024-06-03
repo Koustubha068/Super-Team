@@ -101,19 +101,7 @@ function generateTeamCards() {
  
     card.style.backgroundColor = backgroundColor;
    
-    switch (member.position.toLowerCase()) {
-      case 'Student':
-        backgroundColor = 'red'
-        break
-      case 'mid':
-        backgroundColor = 'green'
-        break
-      case 'defender':
-        backgroundColor = 'blue'
-        break
-      default:
-        backgroundColor = 'gray'
-    }
+  
     //create a list of skils with li tags
     const skillsList = member.skills
       .map((skill) => `<li> ${skill} </li>`)
