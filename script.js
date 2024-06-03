@@ -98,6 +98,23 @@ function generateTeamCards() {
 
     //styling card based on position:
     let backgroundColor;
+    switch (member.position) {
+      case 'Student':
+        backgroundColor = '#ffc107'; // Yellow for Student
+        break;
+      case 'Pastor':
+        backgroundColor = '#28a745'; // Green for Pastor
+        break;
+      case 'Proffesor':
+        backgroundColor = '#007bff'; // Blue for Proffesor
+        break;
+      case 'Coach':
+        backgroundColor = '#dc3545'; // Red for Coach
+        break;
+      default:
+        backgroundColor = '#6c757d'; // Gray for other positions
+    }
+    
  
     card.style.backgroundColor = backgroundColor;
    
